@@ -1,0 +1,17 @@
+nav.navbar.navbar-default.navbar-fixed-top
+    .container
+        .navbar-header.page-scroll
+            a.navbar-brand(href='#page-top') Biesel Co
+
+        #main-navbar
+            ul.nav.navbar-nav.navbar-right
+                li.hidden
+                    a(href='#page-top')
+                li.page-scroll
+                    i.fa.fa-phone
+                    a(href='tel:' + contact.phone.link)
+                        | #{contact.phone.display}
+                li.page-scroll    
+                    i.fa.fa-envelope-o
+                    a(href='mailto:' + contact.email)
+                        | #{contact.email}

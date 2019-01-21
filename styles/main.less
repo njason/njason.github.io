@@ -1,0 +1,107 @@
+@import 'node_modules/bootstrap/less/bootstrap';
+@import 'node_modules/font-awesome/less/font-awesome';
+
+@import 'variables';
+@import 'mixins';
+
+@import 'navigation';
+@import 'header';
+@import 'portfolio';
+@import 'footer';
+@import 'modals';
+
+html {
+    position: relative;
+    min-height: 100%;
+    //overflow-y: scroll;
+}
+
+body {
+    overflow-x: hidden;
+    margin-bottom: @footer-height;
+}
+
+p {
+    font-size: 20px;
+
+    .small {
+        font-size: 16px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: 0;
+}
+
+section {
+
+    padding: 100px 0;
+
+    h2 {
+        margin: 0;
+        font-size: 3em;
+    }
+
+	.title {
+		margin-bottom: 40px;
+
+		@media screen and (max-width: @screen-xs-max) {
+			.text-center;
+		}
+	}
+
+    &.success {
+        color: #fff;
+        background: #18bc9c;
+
+        a,
+        a:hover,
+        a:focus,
+        a:active,
+        a.active {
+            outline: 0;
+            color: #2c3e50;
+        }
+    }
+
+    @media(max-width:767px) {
+        padding: 75px 0;
+
+        &.first {
+            padding-top: 75px;
+        }
+    }
+}
+
+.scroll-top {
+    z-index: 1049;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+
+     .btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        font-size: 20px;
+        line-height: 28px;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
